@@ -1,0 +1,17 @@
+<template name="sidebar">
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    {{> menuItems}}
+    {{#if constant 'signin'}}
+    <div class="item computer-only">
+      {{> userSignOut}}
+    </div>
+    {{/if}}
+  </div>
+</template>
+
+<template name="menuItems">
+  {{#each items}}
+  <a class="item {{isActivePath path}} {{visibility}}" href="{{path}}">{{label}}</a>
+  {{/each}}
+</template>

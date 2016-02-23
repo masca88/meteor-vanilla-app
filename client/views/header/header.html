@@ -1,0 +1,25 @@
+<template name="header">
+  <div class="ui large top fixed inverted menu navbar">
+    <div class="ui container">
+      <!-- Computer Navbar Items -->
+      <div class="item computer-only">
+        <img class="ui tiny image " src="{{constant 'SMALL_LOGO'}}">
+      </div>
+      {{> menuItems visibility='computer'}}
+      {{#if constant 'signin'}}
+      <a class="right item computer-only">{{> userSignOut}}</a>
+      {{/if}}
+
+      <!-- Mobile Navbar Items -->
+      <a class="item mobile-only">
+        <i class="sidebar large icon" id="sidebar-toggle"></i>
+      </a>
+      <a class="right item mobile-only" href="/">
+        <img class="ui tiny image mobile-only" src="{{constant 'SMALL_LOGO'}}">
+      </a>
+      <a class="right item mobile-only" href="/settings">
+        <i class="setting large icon"></i>
+      </a>
+    </div>
+  </div>
+</template>

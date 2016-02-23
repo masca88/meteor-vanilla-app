@@ -1,0 +1,8 @@
+<template name="profileData">
+  <div class="ui container stacked segment">
+    <div class="form-box" style="background: {{app.color}}">
+      <h1 class="huge center aligned">Profilo Utente</h1>
+      {{> quickForm id=formSettings.id schema=formSettings.schema doc=formSettings.doc meteormethod="updateUser" type="method"}}
+    </div>
+  </div>
+</template>

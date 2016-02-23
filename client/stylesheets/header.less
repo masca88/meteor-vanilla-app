@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'lib/elements';
+
+.ui.menu.navbar {
+  background: @primaryColor;
+}
+
+.ui.inverted.menu .item:before {
+  background: transparent;
+}
+
+.ui.menu.navbar .item.mobile-only,
+.ui.menu.navbar .right.item.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.menu.navbar .item.computer-only,
+  .ui.menu.navbar .right.item.computer-only {
+    display: none;
+  }
+  .ui.menu.navbar .item.mobile-only,
+  .ui.menu.navbar .right.item.mobile-only {
+    display: block;
+  }
+
+  .ui.inverted.menu a.item:hover {
+    background: none;
+  }
+}

@@ -1,0 +1,12 @@
+<template name="basicLayout">
+  {{> sidebar}}
+  <div id="main" class="pusher">
+    {{> header}}
+    <div class="main-wrapper">
+      {{> yield}}
+    </div>
+    <!-- <footer>
+        {{> footer}}
+    </footer> -->
+  </div>
+</template>

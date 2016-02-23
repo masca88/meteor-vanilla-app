@@ -1,0 +1,22 @@
+<template name="profileDetails">
+  <div class="ui grid container">
+    <div class="ui row">
+      <div class="five wide center aligned column">
+        {{> avatar user=user class="ui circular image" size="large"}}
+      </div>
+      <div class="eleven wide column">
+        <div class="ui list">
+          <div class="item">{{profile.name}}</div>
+          <div class="item">{{profile.lastname}}</div>
+          <div class="item">{{profile.dob}}</div>
+          <div class="item">{{profile.gender}}</div>
+        </div>
+      </div>
+    </div>
+    {{#if editable}}
+    <div class="ui row">
+      <button id="edit" class="ui sixteen wide mobile six wide computer column centered red button">Modifica Dati</button>
+    </div>
+    {{/if}}
+  </div>
+</template>
